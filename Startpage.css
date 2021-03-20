@@ -1,0 +1,91 @@
+/*variables*/
+:root{
+	--color-background: #F7F7F7;
+	--color-accent: #3B7583;
+	--color-accent-hover: #6697A3;
+	--color-input-field-background: white;
+	--color-input-field-text: black;		
+}
+
+/*init*/
+html,body, main, p, input, svg{
+	margin:0px;
+	padding:0px;
+}
+
+html,body{
+	height:100%;
+
+}
+
+input[type="text"]{
+	background-color: var(--color-input-field-background);
+	color: var(--color-input-field-text);
+	font-family: 'Roboto', 'Helvetica',sans-serif;
+}
+
+body{
+	display:flex;
+	justify-content: center;
+	align-items:center;
+	font-family: 'Questrial', 'Roboto', 'Helvetica',sans-serif;
+	
+	background: var(--color-background);
+	/*background-image: url('../../../../../../Users/Eric/Pictures/Wallpaper/photo-of-cabin-near-rocky-mountain-during-golden-hour-3389531.jpg');
+	background-size: 100%;*/
+}
+
+#main-area{
+	margin-bottom:5em;
+	display:grid;
+	grid-template-rows: auto 1fr;
+	grid-template-columns: 1fr;
+}
+
+#time-area{
+	grid-row: 1;
+	grid-column: 1 ;
+	font-size: 4em;
+	text-align:center;
+	color: var(--color-accent);
+	
+}
+
+#search-area{
+	margin-top:2em;
+	display:flex;
+	align-items:center;
+	grid-row: 2;
+	grid-column: 1;
+}
+
+#btn-search{
+	margin-left:0.5em;
+	background: green;
+	border-radius:4px;
+	box-shadow: 0px 0px 2px 0px #A7A7A7;
+	background-color: var(--color-accent);
+}
+
+#btn-search:hover{
+	background-color: var(--color-accent-hover);
+	
+}
+
+#btn-search svg{
+	display:block;
+	margin:auto;
+	padding:0.33em;
+}
+
+#txt-search{
+
+	width: 40em;
+	height: 2em;
+	padding:0.55em;
+	border-radius:4px;
+	border: none;
+	
+	/*border: 1px solid #A7A7A7;*/
+	box-shadow: 0px 0px 2px 0px #A7A7A7;
+}
