@@ -60,7 +60,7 @@ function doWebSearchIfPossible(){
 	console.log(searchText)
 	
 	if(searchText.length > 0){
-		window.open("https://duckduckgo.com/?q="+searchText,"_top");
+		window.open(createSearchUrl(searchText),"_top");
 	}
 }
 
@@ -71,5 +71,23 @@ function addZeroIfNeeded(num){
 	}
 	else{
 		return num + ""
+	}
+}
+
+function createSearchUrl(searchText){
+	const selectorForSearchEngine = document.querySelector("#search_select");
+	const selectedSearchEngineId = selectorForSearchEngine.options[selectorForSearchEngine.selectedIndex].id; 
+	switch(selectedSearchEngineId){
+		case "search_select_duckduckgo":
+			return "https://duckduckgo.com/?q="+searchText;
+		case "search_select_google":
+			return "https://www.google.de/search?q="+searchText;
+		case "search_select_ecosia":
+			return "https://www.ecosia.org/search?q="+searchText;	
+		case "search_select_bing":
+			return "https://www.bing.com/search?q="+searchText;	
+		case "search_select_wikipedia":
+			return "https://de.wikipedia.org/wiki/"+searchText;	
+			
 	}
 }
